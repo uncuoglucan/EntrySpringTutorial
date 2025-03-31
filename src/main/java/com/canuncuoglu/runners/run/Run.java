@@ -13,7 +13,7 @@ public record Run(
         LocalDateTime completedOn,
         @Positive
         Integer km,
-        Location Location
+        Location location
 ) {
         public Run{
                 if (id < 0) {
