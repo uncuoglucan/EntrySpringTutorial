@@ -12,22 +12,24 @@ import org.springframework.context.annotation.Bean;
 
 import com.canuncuoglu.runners.run.Location;
 import com.canuncuoglu.runners.run.Run;
+import com.canuncuoglu.runners.run.RunRepository;
 
 
 @SpringBootApplication
 public class RunnersApplication {
 
-	private static final Logger log = LoggerFactory.getLogger(Application.class);
+	//private static final Logger log = LoggerFactory.getLogger(Application.class);
 	
 	public static void main(String[] args) {
 		SpringApplication.run(RunnersApplication.class, args);
 	}
 
-	@Bean
-	CommandLineRunner runner(){
-		return args -> {
-			Run run = new Run(1, "First run", LocalDateTime.now(), LocalDateTime.now().plusHours(1), 10, Location.OUTDOOR);
-			log.info("Run: " + run);
-		};
-	}
+	// @Bean
+	// CommandLineRunner runner(RunRepository runRepository) {
+	// 	return args -> {
+	// 		Run run = new Run(1, "First run", LocalDateTime.now(), LocalDateTime.now().plusHours(1), 10, Location.OUTDOOR);
+	// 		runRepository.create(run);
+	// 		// log.info("Run: " + run);
+	// 	};
+	// }
 }
