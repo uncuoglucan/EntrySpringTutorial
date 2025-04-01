@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Bean;
 
 import com.canuncuoglu.runners.run.Location;
 import com.canuncuoglu.runners.run.Run;
-import com.canuncuoglu.runners.run.RunRepository;
+import com.canuncuoglu.runners.run.JdbcClientRunRepository;
 
 
 @SpringBootApplication
